@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .wrapper {
     height: 100vh;
     display: flex;
@@ -8,11 +12,11 @@
 .app {
     width: 650px;
     height: 800px;
-    background-color: #E6E6E6;
+    background: rgb(184, 184, 184);
     border-radius: 15px;
     padding: 45px 60px;
     display: grid;
-    grid-template-rows: 66px 621px;
+    grid-template-rows: 66px 711px;
     gap: 22px;
 }
 
@@ -24,76 +28,66 @@
 .app__controls-input {
     border: none;
     border-radius: 10px 0 0 10px;
-    background-color: #ffff;
-    font-size: 18px;
-    padding: 5px 10px;
+    font-size: 18px;  
+    padding: 5px 10px; 
 }
 
 .app__controls-input:focus-visible {
     outline: none;
 }
 
-.app__controls-button {
-    border: none;
+.app__controls-button { 
+    border: none; 
     border-radius: 0 10px 10px 0;
-    background-color: #FBCC28;
+    background: rgb(255, 214, 90);
+    font-size: 18px;
 }
 
 .app__list {
+    background-color: whitesmoke; 
+    border-radius: 15px;
+    padding: 20px; 
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #ffff;
-    overflow: auto;
+    gap: 20px;
+    overflow-y: auto; 
+}
+.app__list-item {
+    background: rgb(255, 185, 185);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 10px; 
+    padding: 30px 20px; 
+    border-radius: 5px;
 }
 
+.app__list-button {
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.app__list-button:hover {
+    background: rgb(255, 35, 35) 
+}
 
 .app__list-checkbox {
-    width: 20px;
+    width: 20px;  
     height: 20px;
 }
 
-.app__list-text {
-    flex-grow: 1;
-    margin-left: 10px;
-    /* gap: 10px; */
+.app__list-item-text {
+    margin: 0;
+    flex-grow: 1; 
+    font-size: 18px;
 }
 
-.app__list-item {
-    background-color: #FFEBEB;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 17px; 
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.completed {
-    background-color: #EBFFED;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 17px; 
-    border-radius: 10px;
+.app__list-item_done {
+    background: rgb(185, 255, 185);
     text-decoration: line-through;
-    cursor: pointer;
-    
 }
 
-*{
-	padding: 0px;
-	margin: 0px;
-	border: none;
-}
-
-*{
-	box-sizing: border-box;
-}
-
-button, select {
-    font-size: inherit;
-    background-color: transparent;
+button:hover {
+    cursor: pointer; 
 }
